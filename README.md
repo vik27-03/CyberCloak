@@ -127,7 +127,7 @@ MIT License
 
 ## Author
 
-Sayandeep, Dhamini, Vikas, Saloni
+ Vikas H, Saloni, Sayandeep, Dhamini
 
 ## Acknowledgments
 
