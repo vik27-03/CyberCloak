@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CyberCloak - Basic Firewall Management System
 
 A web-based firewall management interface that provides easy control over iptables rules for website blocking and IP filtering.
@@ -149,3 +150,6 @@ Sayandeep, Dhamini, Vikas, Saloni
 ## Support
 
 For issues and feature requests, please create an issue in the repository.
+=======
+# CyberCloak
+>>>>>>> 7deacecc9a090a11feefdd745f0986f06bc3445c
