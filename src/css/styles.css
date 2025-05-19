@@ -1,0 +1,195 @@
+/* styles.css - This file contains the styles for the web application */
+
+:root {
+    --primary-gradient: linear-gradient(135deg, #1a1c2e 0%, #2d1b4b 100%);
+    --secondary-gradient: linear-gradient(135deg, #2d2d3d 0%, #1f1f2e 100%);
+    --accent-color: #9f7aea;
+    --text-color: #e2e8f0;
+    --bg-color: #0f1117;
+    --card-bg: #1a1c2e;
+    --input-border: #2d2d3d;
+    --table-hover: #2d1b4b;
+}
+
+/* Dark theme variables */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-gradient: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
+        --secondary-gradient: linear-gradient(135deg, #2d3748 0%, #1a202c 100%);
+        --accent-color: #9f7aea;
+        --text-color: #e2e8f0;
+        --bg-color: #1a202c;
+        --card-bg: #2d3748;
+        --input-border: #4a5568;
+        --table-hover: #2d3748;
+    }
+}
+
+/* Animated background */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    color: var(--text-color);
+    background: linear-gradient(-45deg, #1a1c2e, #2d1b4b, #351c4d, #2b1b4d);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+header {
+    background: var(--primary-gradient);
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 0 0 10px rgba(159, 122, 234, 0.3);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(26, 28, 46, 0.8);
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(159, 122, 234, 0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(159, 122, 234, 0.1);
+}
+
+.button {
+    display: inline-block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(135deg, #9f7aea 0%, #805ad5 100%);
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    border: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(159, 122, 234, 0.2);
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px -1px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.2);
+}
+
+.control-panel {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.block-section, .filter-section {
+    background: var(--secondary-gradient);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(159, 122, 234, 0.1);
+    box-shadow: 0 0 20px rgba(159, 122, 234, 0.1);
+}
+
+input[type="text"], select {
+    width: calc(100% - 2rem);
+    padding: 0.75rem 1rem;
+    margin: 0.5rem 1rem;
+    border: 2px solid var(--input-border);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: var(--bg-color);
+    color: var(--text-color);
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus, select:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(159, 122, 234, 0.2);
+}
+
+.table {
+    width: 100%;
+    border-spacing: 0;
+    margin: 1.5rem 0;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    background: var(--card-bg);
+}
+
+.table th, .table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--input-border);
+}
+
+.table th {
+    background: var(--primary-gradient);
+    color: white;
+    font-weight: 600;
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+.table tr:hover td {
+    background-color: var(--table-hover);
+}
+
+.output-panel {
+    background: var(--card-bg);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-left: 4px solid var(--accent-color);
+    margin-top: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--primary-gradient);
+    color: #ffffff;
+    margin-top: 2rem;
+    backdrop-filter: blur(8px);
+}
+
+h2, h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(159, 122, 234, 0.3);
+}
+
+/* Glass morphism effect for cards */
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* Smooth transitions for theme changes */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}

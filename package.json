@@ -1,0 +1,15 @@
+{
+  "name": "basic-firewall",
+  "version": "1.0.0",
+  "description": "A basic firewall project using HTML, CSS, iptables, and JavaScript for packet filtering.",
+  "main": "src/js/firewall.js",
+  "scripts": {
+    "start": "sudo node src/js/server.js",
+    "iptables": "sudo bash src/scripts/iptables.sh"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}

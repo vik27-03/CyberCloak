@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberCloak</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>🛡️ CyberCloak</h1>
+    </header>
+    <main class="container">
+        <section>
+            <h2>🔒 Packet Filtering Dashboard</h2>
+            <p>Configure your firewall settings using the controls below:</p>
+        </section>
+        <section class="control-panel">
+            <!-- Website Blocking -->
+            <div class="block-section">
+                <h3>🌐 Website Blocking</h3>
+                <input type="text" id="website-input" placeholder="Enter website (e.g. www.example.com)">
+                <button class="button" id="block-website">
+                    Block Website
+                </button>
+            </div>
+
+            <!-- IP Filtering -->
+            <div class="filter-section">
+                <h3>🔍 IP Filtering</h3>
+                <input type="text" id="ip-input" placeholder="Enter IP address">
+                <select id="action-select">
+                    <option value="ACCEPT">✅ Accept</option>
+                    <option value="DROP">❌ Drop</option>
+                    <option value="REJECT">⛔ Reject</option>
+                </select>
+                <button class="button" id="filter-button">
+                    Apply Rule
+                </button>
+            </div>
+
+            <!-- Rules Display -->
+            <div class="rules-display">
+                <h3>📋 Active Rules</h3>
+                <table class="table" id="rules-table">
+                    <thead>
+                        <tr>
+                            <th>Target</th>
+                            <th>Action</th>
+                            <th>Manage</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rules-body"></tbody>
+                </table>
+            </div>
+        </section>
+        <div id="output" class="output-panel"></div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Basic Firewall Project | Secure Your Network</p>
+    </footer>
+    <script src="js/firewall.js"></script>
+</body>
+</html>
