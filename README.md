@@ -98,20 +98,13 @@ http://localhost:3000
 To modify the firewall rules or add new features:
 
 1. Edit 
+iptables.sh for firewall logic.
 
-iptables.sh
+3. Update 
+server.js for API endpoints.
 
- for firewall logic
-2. Update 
-
-server.js
-
- for API endpoints
-3. Modify 
-
-firewall.js
-
- for frontend functionality
+3. Modify
+firewall.js for frontend functionality
 
 ## License
 
